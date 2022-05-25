@@ -1,11 +1,8 @@
-/**
- * Responds to any HTTP request.
+/* HTTP Cloud Function.
  *
- * @param {!express:Request} req HTTP request context.
- * @param {!express:Response} res HTTP response context.
+ * @param {Object} req Cloud Function request context.
+ * @param {Object} res Cloud Function response context.
  */
- exports.helloWorld = (req, res) => {
-    let message = req.query.message || req.body.message || 'Hola People!';
-    res.status(200).send(message);
-  };
-  
+exports.helloGET = (req, res) => {
+  res.send("Hello from Cloud Functions and Cloud Source Repositories");
+};
